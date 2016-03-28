@@ -1,0 +1,16 @@
+ALTER TABLE layout_boxes DROP COLUMN show_box_min_width;
+ALTER TABLE layout_boxes ADD layout_box_status_desktop TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER layout_box_status_single;
+ALTER TABLE layout_boxes ADD layout_box_status_tablet TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER layout_box_status_desktop;
+ALTER TABLE layout_boxes ADD show_box_min_width TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER layout_box_status_tablet;
+
+UPDATE configuration SET configuration_description = 'Width of the Left Column Boxes<br />px may be included<br />Default = 150px<br /><b>This configuration has no affect with the ZCA Responsive Components<b/>' WHERE configuration_key = 'BOX_WIDTH_LEFT';
+UPDATE configuration SET configuration_description = 'Width of the Right Column Boxes<br />px may be included<br />Default = 150px<br /><b>This configuration has no affect with the ZCA Responsive Components<b/>' WHERE configuration_key = 'BOX_WIDTH_RIGHT';
+
+UPDATE configuration SET configuration_description = 'Width of the Left Column<br />px may be included<br />Default = 150px<br /><br /><b>This configuration has no affect with the ZCA Responsive Components<b/>' WHERE configuration_key = 'COLUMN_WIDTH_LEFT';
+UPDATE configuration SET configuration_description = 'Width of the Right Column<br />px may be included<br />Default = 150px<br /><b>This configuration has no affect with the ZCA Responsive Components<b/>' WHERE configuration_key = 'COLUMN_WIDTH_RIGHT';
+
+INSERT INTO configuration (configuration_id, configuration_title, configuration_key, configuration_value, configuration_description, configuration_group_id, sort_order, date_added, use_function, set_function) VALUES 
+(NULL, 'Responsive Left Column Width', 'SET_COLUMN_LEFT_LAYOUT', '2', 'Set Width of Left Column<br />Default is <b>2</b>, Total columns <b>12</b>.<br />Responsive Left, Center & Right Column Width must = 12', 19, 200, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Responsive Center Column Width', 'SET_COLUMN_CENTER_LAYOUT', '8', 'Set Width of Right Column<br />Default is <b>8</b>, Total columns <b>12</b>.<br />Responsive Left, Center & Right Column Width must = 12', 19, 201, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Responsive Right Column Width', 'SET_COLUMN_RIGHT_LAYOUT', '2', 'Set Width of Right Column<br />Default is <b>2</b>, Total columns <b>12</b>.<br />Responsive Left, Center & Right Column Width must = 12', 19, 202, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Responsive Mobile Full Site Version Width', 'SET_MAX_WIDTH', '980px', 'Set Width of Responsive Mobile Full Site Version<br />Default is <b>980px</b>, To give mobile users same experience, this width should be the same max-width for the #mainWrapper selector in your stylesheet.css file', 19, 203, NOW(), NULL , NULL);
