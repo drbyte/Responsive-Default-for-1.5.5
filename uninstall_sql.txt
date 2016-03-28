@@ -1,0 +1,7 @@
+ALTER TABLE layout_boxes DROP COLUMN layout_box_status_desktop;
+ALTER TABLE layout_boxes DROP COLUMN layout_box_status_tablet;
+ALTER TABLE layout_boxes DROP COLUMN show_box_min_width;
+DELETE FROM configuration WHERE configuration_key = 'SET_COLUMN_LEFT_LAYOUT';
+DELETE FROM configuration WHERE configuration_key = 'SET_COLUMN_CENTER_LAYOUT';
+DELETE FROM configuration WHERE configuration_key = 'SET_COLUMN_RIGHT_LAYOUT';
+DELETE FROM configuration WHERE configuration_key = 'SET_MAX_WIDTH';
