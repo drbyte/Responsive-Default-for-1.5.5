@@ -1,0 +1,132 @@
+/**
+ *
+ * @package templateSystem
+ * @copyright Copyright 2003-2007 Zen Cart Development Team
+ * @copyright Portions Copyright 2003 osCommerce
+ * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
+ * @version ZCA/GIT: $Id: rbarbour New for v1.5.5 $
+ *
+ */
+
+@media (min-width:0) and (max-width:480px) {
+
+/*  DEVICE DISPLAY */
+/* ----------------------------------------------------------------------------- */
+.mobileHide { display:none; }
+.mobile-tabletHide { display:none; }
+.mobile-desktopHide { display:none; }
+
+#asideLeftWrapper { padding-left:0; }
+#sectionWrapper { padding:0 0.5em; }
+#asideRightWrapper { padding-right:0; }
+
+/* LAYOUT GRID */
+/* ----------------------------------------------------------------------------- */
+.layout { width:100%; } 
+.layout>[class*="columns"] { float:none; display:block; width:auto; margin:0px; clear:both; } .layout>.columns12, .layout>.columns11, .layout>.columns10, .layout>.columns9, .layout>.columns8, .layout>.columns7, .layout>.columns6, .layout>.columns5, .layout>.columns4, .layout>.columns3, .layout>.columns2, .layout>.columns1 { width:100%; }
+
+/* COLUMNAR BLOCKS */
+/* ----------------------------------------------------------------------------- */
+.blocks { width:100%; } 
+.blocks>[class*="columns"] { float:none; display:block; width:auto; margin:0; padding:25px 10px; clear:both; }
+.blocks>.columns10, .blocks>.columns9, .blocks>.columns8, .blocks>.columns7, .blocks>.columns6, .blocks>.columns5, .blocks>.columns4, .blocks>.columns3, .blocks>.columns2, .blocks>.columns1 { width:100%; }
+
+/* TABLES  */
+/* ----------------------------------------------------------------------------- */
+/* PAGE = index&cPath  */
+#productListing table,
+#productListing thead,
+#productListing tbody,
+#productListing th,
+#productListing td,
+#productListing tr { display: block; }
+#productListing tr.productListing-rowheading { display:none; }
+#productListing tr.productListing-odd,
+#productListing tr.productListing-even
+{ width:100%; float:left; height:auto; text-align:center; }
+}
+
+
+
+@media (min-width:481px) and (max-width:767px) {
+
+/*  DEVICE DISPLAY */
+/* ----------------------------------------------------------------------------- */
+.tabletHide { display:none; }
+.mobile-tabletHide { display:none; }
+.tablet-desktopHide { display:none; }
+
+#asideLeftWrapper { padding-left:0; }
+#sectionWrapper { padding:0 0.5em; }
+#asideRightWrapper { padding-right:0; }
+
+/* LAYOUT GRID */
+/* ----------------------------------------------------------------------------- */
+.layout { width:100%; } 
+.layout>[class*="columns"] { float:none; display:block; width:auto; margin:0px; clear:both; }
+.layout>.columns12, .layout>.columns11, .layout>.columns10, .layout>.columns9, .layout>.columns8, .layout>.columns7, .layout>.columns6, 
+.layout>.columns5, .layout>.columns4, .layout>.columns3, .layout>.columns2, .layout>.columns1 
+{ width:100%; }
+
+/* COLUMNAR BLOCKS */
+/* ----------------------------------------------------------------------------- */
+.blocks { width:100%; } 
+.blocks>[class*="columns"] { float:none; display:block; width:auto; margin:0; padding:25px 10px; clear:both; }
+.blocks>.columns10, .blocks>.columns9, .blocks>.columns8, .blocks>.columns7, .blocks>.columns6, .blocks>.columns5, .blocks>.columns4, .blocks>.columns3, .blocks>.columns2, .blocks>.columns1
+{ width:100%; }
+
+} 
+
+
+
+@media (min-width:768px) and (max-width:2400px) {
+
+
+/*  DEVICE DISPLAY */
+/* ----------------------------------------------------------------------------- */
+.desktopHide { display:none; }
+.mobile-desktopHide { display:none; }
+.tablet-desktopHide { display:none; }
+
+#asideLeftWrapper { padding-left:0.5em; }
+#sectionWrapper { padding:0 0.5em; }
+#asideRightWrapper { padding-right:0.5em; }
+
+/* LAYOUT GRID */
+/* ----------------------------------------------------------------------------- */
+.layout { width:100%!important; zoom:1; }
+.layout:before, .layout:after { display:table; content:""; }
+.layout:after { clear:both; }
+.layout>[class*="columns"] { float:left; display:table-cell; margin:0; padding: 0; }
+
+.layout>.columns12 { width: 100%; }
+.layout>.columns11 { width: 91.66%; }
+.layout>.columns10 { width: 83.33%; }
+.layout>.columns9 { width: 75%; }
+.layout>.columns8 { width: 66.66%; }
+.layout>.columns7 { width: 58.33%; }
+.layout>.columns6 { width: 50%; }
+.layout>.columns5 { width: 41.66%; }
+.layout>.columns4 { width: 33.33%; }
+.layout>.columns3 { width: 25%; }
+.layout>.columns2 { width: 16.66%; }
+.layout>.columns1 { width: 8.333%; }
+
+/* COLUMNAR BLOCKS */
+/* ----------------------------------------------------------------------------- */
+.blocks { width:100%!important; zoom:1; }
+.blocks:before, .blocks:after { display:table; content:""; }
+.blocks:after { clear:both; }
+.blocks>[class*="columns"] { float:left; display:table-cell; margin:0; padding:25px 10px; }
+.blocks>.columns10 { width:10.00%; }
+.blocks>.columns9  { width:11.11%; }
+.blocks>.columns8  { width:12.50%; }
+.blocks>.columns7  { width:14.29%; }
+.blocks>.columns6  { width:16.66%; }
+.blocks>.columns5  { width:20.00%; }
+.blocks>.columns4  { width:25.00%; }
+.blocks>.columns3  { width:33.33%; }
+.blocks>.columns2  { width:50.00%; }
+.blocks>.columns1  { width:100.00%;}
+
+} 
