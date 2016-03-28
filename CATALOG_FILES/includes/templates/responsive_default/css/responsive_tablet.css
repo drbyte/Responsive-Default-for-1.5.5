@@ -1,0 +1,69 @@
+/**
+ *
+ * @package templateSystem
+ * @copyright Copyright 2003-2007 Zen Cart Development Team
+ * @copyright Portions Copyright 2003 osCommerce
+ * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
+ * @version ZCA/GIT: $Id: rbarbour New for v1.5.5 $
+ *
+ */
+
+/* ALL TABLETS - ORIENTATION:LANDSCAPE */
+@media only screen and (orientation:landscape)  {
+/*  DEVICE DISPLAY */
+/* ----------------------------------------------------------------------------- */
+.tabletHide { display:none; }
+.mobile-tabletHide { display:none; }
+.tablet-desktopHide { display:none; }
+
+#asideLeftWrapper { padding-left:0; }
+#sectionWrapper { padding:0 0.5em; }
+#asideRightWrapper { padding-right:0; }
+
+/* LAYOUT GRID */
+/* ----------------------------------------------------------------------------- */
+.layout { width:100%; } 
+.layout>[class*="columns"] { float:none; display:block; width:auto; margin:0px; clear:both; }
+.layout>.columns12, .layout>.columns11, .layout>.columns10, .layout>.columns9, .layout>.columns8, .layout>.columns7, .layout>.columns6, 
+.layout>.columns5, .layout>.columns4, .layout>.columns3, .layout>.columns2, .layout>.columns1 
+{ width:100%; }
+
+/* COLUMNAR BLOCKS */
+/* ----------------------------------------------------------------------------- */
+.blocks { width:100%; } 
+.blocks>[class*="columns"] { float:none; display:block; width:auto; margin:0; padding:25px 10px; clear:both; }
+.blocks>.columns10, .blocks>.columns9, .blocks>.columns8, .blocks>.columns7, .blocks>.columns6, .blocks>.columns5, .blocks>.columns4, .blocks>.columns3, .blocks>.columns2, .blocks>.columns1
+{ width:100%; }
+
+}
+
+/* ALL TABLETS - ORIENTATION:PORTRAIT (DEFAULT LAYOUT) */
+@media only screen and (orientation:portrait)  {
+/*  DEVICE DISPLAY */
+/* ----------------------------------------------------------------------------- */
+.tabletHide { display:none; }
+.mobile-tabletHide { display:none; }
+.tablet-desktopHide { display:none; }
+
+#asideLeftWrapper { padding-left:0; }
+#sectionWrapper { padding:0 0.5em; }
+#asideRightWrapper { padding-right:0; }
+
+/* LAYOUT GRID */
+/* ----------------------------------------------------------------------------- */
+.layout { width:100%; } 
+.layout>[class*="columns"] { float:none; display:block; width:auto; margin:0px; clear:both; }
+.layout>.columns12, .layout>.columns11, .layout>.columns10, .layout>.columns9, .layout>.columns8, .layout>.columns7, .layout>.columns6, 
+.layout>.columns5, .layout>.columns4, .layout>.columns3, .layout>.columns2, .layout>.columns1 
+{ width:100%; }
+
+/* COLUMNAR BLOCKS */
+/* ----------------------------------------------------------------------------- */
+.blocks { width:100%; } 
+.blocks>[class*="columns"] { float:none; display:block; width:auto; margin:0; padding:25px 10px; clear:both; }
+.blocks>.columns10, .blocks>.columns9, .blocks>.columns8, .blocks>.columns7, .blocks>.columns6, .blocks>.columns5, .blocks>.columns4, .blocks>.columns3, .blocks>.columns2, .blocks>.columns1
+{ width:100%; }
+
+
+
+}
