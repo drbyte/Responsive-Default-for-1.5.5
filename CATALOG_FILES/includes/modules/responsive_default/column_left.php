@@ -17,7 +17,7 @@ if (!defined('IS_ADMIN_FLAG')) {
 $column_box_default='tpl_box_default_left.php';
 
 // Check if there are boxes for the column
-$column_left_display= $db->Execute("select layout_box_name, layout_box_status_desktop, layout_box_status_tablet, layout_box_status_mobile from " . TABLE_LAYOUT_BOXES . " where layout_box_location = 0 and layout_box_status= '1' and layout_template ='" . $template_dir . "'" . ' order by layout_box_sort_order');
+$column_left_display= $db->Execute("select layout_box_name, layout_box_status_desktop, layout_box_status_tablet, show_box_min_width from " . TABLE_LAYOUT_BOXES . " where layout_box_location = 0 and layout_box_status= '1' and layout_template ='" . $template_dir . "'" . ' order by layout_box_sort_order');
 
 // safety row stop
 $box_cnt=0;
@@ -33,7 +33,7 @@ if ( file_exists(DIR_WS_MODULES . 'sideboxes/' . $template_dir . '/' . $column_l
 
 if ( $detect->isMobile() && !$detect->isTablet() || $_SESSION['layoutType'] == 'mobile' ) {
 
-if ( $column_left_display->fields['layout_box_status_mobile'] == '0' ) {
+if ( $column_left_display->fields['show_box_min_width'] == '0' ) {
     $flag_disable_box = true;
   } else {
     $flag_disable_box = false;
@@ -63,7 +63,7 @@ $tabletClass = '';
 
  }
 
-if ( $column_left_display->fields['layout_box_status_mobile'] == '0' ) {
+if ( $column_left_display->fields['show_box_min_width'] == '0' ) {
 $mobileClass = 'mobileHide';
   } else {
 $mobileClass = '';
@@ -86,7 +86,7 @@ if ($flag_disable_box == false) {
 
 if ( $detect->isMobile() && !$detect->isTablet() || $_SESSION['layoutType'] == 'mobile' ) {
 
-if ( $column_left_display->fields['layout_box_status_mobile'] == '0' ) {
+if ( $column_left_display->fields['show_box_min_width'] == '0' ) {
     $flag_disable_box = true;
   } else {
     $flag_disable_box = false;
@@ -116,7 +116,7 @@ $tabletClass = '';
 
  }
 
-if ( $column_left_display->fields['layout_box_status_mobile'] == '0' ) {
+if ( $column_left_display->fields['show_box_min_width'] == '0' ) {
 $mobileClass = 'mobileHide';
   } else {
 $mobileClass = '';
